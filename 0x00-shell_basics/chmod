@@ -1,0 +1,7 @@
+#!/bin/bashcd u+x 2-bring_me_home
+#!/bin/bashls -l u+x 3-listfiles
+#!/bin/bashls -la u+x 4-listmorefiles
+#!/bin/bashls -lna u+x 5-listfilesdigitonly
+#!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
+#!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
+#!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
