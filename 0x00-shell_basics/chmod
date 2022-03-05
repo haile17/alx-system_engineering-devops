@@ -11,3 +11,6 @@
 #!/bin/bashrm -r /tmp/my_first_directory u+x 9-firstdirdelettion
 #!/bin/bashcd - u+x 10-back
 #!/bin/bashls -la. ../boot u+x 11-lists
+#!/bin/bashfile /tmp/iamafile u+x 12-file_type
+#!/bin/bashln -s /bin/ls __ls__ u+x 13-symbolic_link
+#!/bin/bashcp *.html ../ u+x 14-copy_html
