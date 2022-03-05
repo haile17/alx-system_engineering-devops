@@ -16,3 +16,4 @@
 #!/bin/bashcp *.html ../ u+x 14-copy_html
 #!/bin/bash rm *~ u+x 101-clean_emacs
 /alx-system_engineering-devops/0x00-shell_basics
+/alx-system_engineering-devops/0x00-shell_basics
