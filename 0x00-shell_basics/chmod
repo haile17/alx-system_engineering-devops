@@ -15,3 +15,4 @@
 #!/bin/bashln -s /bin/ls __ls__ u+x 13-symbolic_link
 #!/bin/bashcp *.html ../ u+x 14-copy_html
 #!/bin/bash rm *~ u+x 101-clean_emacs
+/alx-system_engineering-devops/0x00-shell_basics
