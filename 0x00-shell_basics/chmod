@@ -5,3 +5,9 @@
 #!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
 #!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
 #!/bin/bashmkdir /tmp/my_first_directory u+x 6-firstdirectory
+#!/bin/bashmv /tmp/betty u+x 7-movethatfile
+#!/bin/bashmv /tmp/betty /tmp/my_first_directory/betty u+x 7-movethatfile
+#!/bin/bashrm /tmp/my_first_directory/betty u+x 8-firstdelete
+#!/bin/bashrm -r /tmp/my_first_directory u+x 9-firstdirdelettion
+#!/bin/bashcd - u+x 10-back
+#!/bin/bashls -la. ../boot u+x 11-lists
