@@ -1,1 +1,2 @@
-/bin/bashcp *.html ../
+#!/bin/bash
+cp *.html ../
