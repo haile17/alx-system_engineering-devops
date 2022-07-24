@@ -1,21 +1,30 @@
-#!/bin/bash
-i=1
-while [ $i -le 20 ]
+#!/usr/bin/env bash
+# displays numbers from 1 to 20.
+
+COUNTER=1
+while [ $COUNTER -lt 21 ]
 do
-	if [ $i -eq 4 ]
-	then
-		echo $i
-		echo "bad luck from China"
-	elif [ $i -eq 9 ]
-	then
-		echo $i
-		echo "bad luck from Japan"
-	elif [ $i -eq 17 ]
-	then
-		echo $i
-		echo "bad luck from Italy"
-	else
-		echo $i
-	fi
-	let i=i+1
+    case $COUNTER in
+
+        4)
+	    echo $COUNTER
+	    echo "bad luck from China"
+	    ;;
+	
+	9)
+	    echo $COUNTER
+	    echo "bad luck from Japan"
+	    ;;
+	
+	17)
+	    echo $COUNTER
+	    echo "bad luck from Italy"
+	    ;;
+
+	*)
+	    echo $COUNTER
+	    ;;
+    esac
+
+    ((COUNTER+=1))
 done
