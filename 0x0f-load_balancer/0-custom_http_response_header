@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#installs Nginx with the following configeration
+#+ listens port 80
+#+ returns a page containing "school" 
+#+ configer /redirect_me as a "301 moved permantly"
+#+ include a custom 404 page containing "this is not a page "
+#+ contains a custom HTTP header named X-served-by
+#+ the value of HTTP header is the hostname of the running server
+
+sudo apt-get update
+sude apt-get install -y nginx
+
+sudo mkdir -p /var/www/html
+sudo touch /var/www/html/index.html
+echo "my school" > /var/www/html/404.html
+sudo touch /var/www/html/404.html
+echo "this is not a page" > /var/www/html/404.html
+
+printf %s "server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	add_header X-Served-By $HOSTNAME;
+	root /var/www/html;
+	index index.html index.html;
+	location /redirect_me {
+		return 301 http://cuberule.com/;
+}
+	error_page 404 /404.html
+	location /404 {
+		root /var/www/html;
+		internal;
+ 	}
+}" > /etc/nginx/sites-available/default
+
+sudo service nginx restart
