@@ -3,14 +3,14 @@
 prints the top ten titiles of a given subreddit
 """
 
-from request import get
+from requests import get
 
 def top_ten(subreddit):
     try:
         h = get("https://www.reddit.com/r/{}/hot.json".format(subreddit),
-        headers={'user-agent': 'hAxr'}, params={'limits': 10},
+        headers={'user-agent':'' }, params={'limits': 10},
         allow_redirects=False).json()
         for item in h['data']['children']:
-            print(item['dta']['title'])
+            print(item['data']['title'])
     except:
         print('None')
