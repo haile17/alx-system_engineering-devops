@@ -5,7 +5,8 @@ returns a list of all titles for a given subreddit
 from requests import get
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=None):
+
     try:
         url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
         res = get(url, headers={'User-agent': 'haile'}, params={'after': after},
