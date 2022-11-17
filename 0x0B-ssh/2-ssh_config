@@ -1,7 +1,6 @@
-#SSH config File 
-#
-Host 3611-web-01
-	Hostname 52.87.255.10
-	user ubuntu
-	PasswordAuthentication no
-	IdentityFile ~/.ssh/school
+# SSH client configuration to use the private key ~/.ssh/school
+# SSH client configeration to refuse to authenticate usiing password
+
+Host 52.87.255.10
+     PasswordAuthentication no
+     IdentityFile ~/.ssh/school
